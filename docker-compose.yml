@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  bot: 
+    build: .
+    restart: always #перезапускать при падении сервера
+    ports:
+      - "4000:4000"
+    volumes:
+      - /app2:/app #рабочая директория app в контейнере связана с папка aTechNutrition на диске C:/  
+
+
